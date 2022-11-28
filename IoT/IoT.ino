@@ -35,6 +35,11 @@ void sendSensor()
   float h = dht.readHumidity();
   float t = dht.readTemperature(); // or dht.readTemperature(true) for Fahrenheit
 
+  Serial.print('humuditi : ')
+  Serial.print(h)
+  Serial.print(' temp : ')
+  Serial.print(t)
+  
   if (isnan(h) || isnan(t)) {
     Serial.println("Failed to read from DHT sensor!");
     return;
